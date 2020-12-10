@@ -126,20 +126,9 @@ module BackendMUX(
                     NO_HIT:
                         cpu_health_out = cpu_health_out - 0;
                 endcase
-//            default: // any other keyboard input
-//                cpu_health_out = cpu_health_out + 0;
         endcase
-//        cpu_health_out <= cpu_health;
         
-//        p1_health_out <= p1_health;
-    end
-    
-//    assign cpu_health_out = cpu_health + player_damageCounter;
-    
-    always @(posedge sec_clk)
-    begin
-    
-            case(cpu_attackState)
+        case(cpu_attackState)
             CRITICAL: begin
                 p1_health_out = p1_health_out - 6;
                 cpu_isAttacking = 1;
@@ -157,8 +146,36 @@ module BackendMUX(
                 cpu_isAttacking = 0;
                 end
             endcase
+//        cpu_health_out <= cpu_health;
+        
+//        p1_health_out <= p1_health;
+    end
+    
+//    assign cpu_health_out = cpu_health + player_damageCounter;
+    
+//    always @(posedge sec_clk)
+//    begin
+    
+//            case(cpu_attackState)
+//            CRITICAL: begin
+//                p1_health_out = p1_health_out - 6;
+//                cpu_isAttacking = 1;
+//                end
+//            NORMAL: begin
+//                p1_health_out = p1_health_out - 5;
+//                cpu_isAttacking = 1;
+//                end
+//            MISS: begin
+//                p1_health_out = p1_health_out - 0;
+//                cpu_isAttacking = 0;
+//                end
+//            NO_HIT: begin
+//                p1_health_out = p1_health_out - 0;
+//                cpu_isAttacking = 0;
+//                end
+//            endcase
             
-     end
+//     end
 //        assign p1_health_out = p1_health + cpu_damageCounter;
     
     // CPU ATTACKING:
