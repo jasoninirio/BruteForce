@@ -7,7 +7,7 @@ Using the [Xilinx Nexys A7 FGPA Board](https://reference.digilentinc.com/referen
 
 ## Demo Video
 
-A demo of our final project can be viewed [here](ATTACH YOUTUBE LINK HERE)
+A demo of our final project can be viewed [here](https://youtu.be/53K4K4CjAhM)
 
 ## Overview
 
